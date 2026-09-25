@@ -1,82 +1,38 @@
-# Apex Intelligence Local Server
+# Apex Intelligence
 
-This is a simple local-only server version of Apex Intelligence.
+A simple local-only AI growth agency app.
 
-## No Docker. No External Services. Just Python.
+## One-click launch for Windows
 
-### Quick Start
+Double-click this file:
 
-1. Install Python 3.8+
-   https://www.python.org/downloads/
+- `one_click_start.py`
 
-2. Open the folder in PowerShell (Windows) or Terminal (Mac/Linux)
+This will install dependencies and launch the app.
 
-3. Run:
+## Manual launch
 
-**Windows:**
 ```powershell
 python -m pip install -r requirements.txt
-python run.py
+python launch_app.py
 ```
 
-**Mac/Linux:**
-```bash
-python3 -m pip install -r requirements.txt
-python3 run.py
-```
+Then open:
+- http://localhost:8000/docs
 
-4. Open in browser:
-   http://localhost:8000/docs
-
-### That's All
-
-The server will run locally. Open your browser. Start using the API.
-
-### What You Get
+## Features
 
 - Lead generation
-- Deal negotiation workflow
-- Growth audit creation
-- Delivery planning
-- Customer support
+- Deal creation
+- Audit creation
+- Delivery plan generation
+- Ticketing
 - CEO summary
-- All approval gates
+- SQLite storage
 
-### API Endpoints
+## Notes
 
-Once running, visit: http://localhost:8000/docs
-
-You'll see all available endpoints and can test them directly.
-
-### Example Commands
-
-**Generate leads:**
-```bash
-curl -X POST http://localhost:8000/leads/generate -H "Content-Type: application/json" -d '{"city":"Austin, TX","category":"dental","limit":5}'
-```
-
-**Get CEO summary:**
-```bash
-curl http://localhost:8000/ceo/summary
-```
-
-**List all leads:**
-```bash
-curl http://localhost:8000/leads
-```
-
-### Database
-
-Data is stored in `apex_intelligence.db` (SQLite)
-
-Automatically created on first run.
-
-### Stop the Server
-
-Press `Ctrl+C` in the terminal
-
-### That's It
-
-No Docker. No Postgres. No Redis. No Celery.
-
-Just a simple local Python server.
+- No Docker
+- No Postgres
+- No Redis
+- Local-only startup
